@@ -84,16 +84,19 @@
 
 ### Functional Requirements
 
-- **FR-001**: System MUST [specific capability, e.g., "allow users to create accounts"]
-- **FR-002**: System MUST [specific capability, e.g., "validate email addresses"]  
-- **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
-- **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
-- **FR-005**: System MUST [behavior, e.g., "log all security events"]
+- **FR-001**: System MUST follow Specification Supremacy principle - all implementation must follow formally defined specifications generated and validated using Spec-Kit Plus
+- **FR-002**: System MUST ensure Accuracy by Verification - all factual, technical, and architectural claims must be verifiable against authoritative primary sources
+- **FR-003**: System MUST ensure Grounded Intelligence - if implementing AI/RAG functionality, responses must be strictly from indexed content with no hallucinations
+- **FR-004**: System MUST target technical readers with computer science or software engineering background
+- **FR-005**: System MUST ensure Reproducibility - every build, deployment, and AI behavior must be reproducible from documented specifications and source code
+- **FR-006**: System MUST use mandatory technology stack: Docusaurus, Spec-Kit Plus, Claude Code, FastAPI, Qdrant Cloud, Neon Serverless PostgreSQL
+- **FR-007**: Content MUST meet readability requirements (Flesch–Kincaid Grade 10–12) and use APA citation style
+- **FR-008**: If implementing RAG chatbot, it MUST answer strictly from indexed book content and support contextual Q&A
 
 *Example of marking unclear requirements:*
 
-- **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
-- **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
+- **FR-009**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
+- **FR-010**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
 
 ### Key Entities *(include if feature involves data)*
 

@@ -31,7 +31,16 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+Constitution alignment checklist:
+- [ ] Specification Supremacy: All implementation follows formally defined specifications generated and validated using Spec-Kit Plus
+- [ ] Accuracy by Verification: All factual, technical, and architectural claims are verifiable against authoritative primary sources
+- [ ] Grounded Intelligence: If implementing AI/RAG functionality, responses are strictly from indexed content (no hallucinations)
+- [ ] Clarity for Technical Readers: Content targets readers with computer science or software engineering background
+- [ ] Reproducibility: Every build, deployment, and AI behavior is reproducible from documented specifications and source code
+- [ ] Ethical & Transparent AI Usage: AI-generated content is auditable, traceable, and governed by deterministic specifications
+- [ ] Technology Stack Compliance: Using mandatory technologies (Docusaurus, Spec-Kit Plus, Claude Code, FastAPI, Qdrant, Neon PostgreSQL)
+- [ ] Book Authoring Standards: Content meets readability requirements (Flesch–Kincaid Grade 10–12) and APA citation style
+- [ ] RAG Chatbot Compliance: If applicable, chatbot answers strictly from indexed book content and supports contextual Q&A
 
 ## Project Structure
 

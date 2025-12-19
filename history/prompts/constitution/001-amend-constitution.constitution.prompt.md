@@ -1,13 +1,33 @@
-<!-- SYNC IMPACT REPORT:
-Version change: 1.0.0 → 1.0.0
-Modified principles: None (completely new constitution)
-Added sections: All sections from user input
-Removed sections: Template placeholders
-Templates requiring updates: ✅ Updated
-Follow-up TODOs: None
--->
-# AI-Native Book with Embedded RAG Intelligence Constitution
+---
+id: 1
+title: Amend Constitution
+stage: constitution
+date: 2025-12-18
+surface: agent
+model: Claude Sonnet 4.5
+feature: none
+branch: master
+user: Claude Code
+command: /sp.constitution
+labels: ["constitution", "governance", "spec-kit-plus"]
+links:
+  spec: null
+  ticket: null
+  adr: null
+  pr: null
+files:
+ - .specify/memory/constitution.md
+ - .specify/templates/plan-template.md
+ - .specify/templates/spec-template.md
+ - .specify/templates/tasks-template.md
+tests:
+ - none
+---
 
+## Prompt
+
+```text
+# Constitution
 ## Unified AI-Native Book Project
 
 **Project Title:** AI-Native Book with Embedded RAG Intelligence
@@ -49,23 +69,23 @@ To design, write, and deploy a **unified, production-grade technical book** that
 
 The project SHALL adhere to the following immutable principles:
 
-### 1. Specification Supremacy
-All implementation must follow formally defined specifications generated and validated using Spec-Kit Plus.
+1. **Specification Supremacy**
+   All implementation must follow formally defined specifications generated and validated using Spec-Kit Plus.
 
-### 2. Accuracy by Verification
-All factual, technical, and architectural claims MUST be verifiable against authoritative primary sources.
+2. **Accuracy by Verification**
+   All factual, technical, and architectural claims MUST be verifiable against authoritative primary sources.
 
-### 3. Grounded Intelligence
-The RAG chatbot MUST respond strictly from indexed book content or explicitly user-selected text. Hallucinated or ungrounded answers are prohibited.
+3. **Grounded Intelligence**
+   The RAG chatbot MUST respond strictly from indexed book content or explicitly user-selected text. Hallucinated or ungrounded answers are prohibited.
 
-### 4. Clarity for Technical Readers
-Content SHALL target readers with a computer science or software engineering background.
+4. **Clarity for Technical Readers**
+   Content SHALL target readers with a computer science or software engineering background.
 
-### 5. Reproducibility
-Every build, deployment, and AI behavior must be reproducible from documented specifications and source code.
+5. **Reproducibility**
+   Every build, deployment, and AI behavior must be reproducible from documented specifications and source code.
 
-### 6. Ethical & Transparent AI Usage
-AI-generated content must be auditable, traceable, and clearly governed by deterministic specifications.
+6. **Ethical & Transparent AI Usage**
+   AI-generated content must be auditable, traceable, and clearly governed by deterministic specifications.
 
 **Supporting sources:**
 - ISO/IEC 25010 Software Quality Model: https://www.iso.org/standard/35733.html
@@ -209,7 +229,40 @@ The project SHALL be deemed successful if:
 
 This Constitution is final, binding, and enforceable across all human and AI contributors.
 No implementation detail may contradict its principles, standards, or constraints.
+```
 
----
+## Response snapshot
 
-**Version**: 1.0.0 | **Ratified**: 2025-12-18 | **Last Amended**: 2025-12-18
+The project constitution has been successfully updated with the new AI-Native Book with Embedded RAG Intelligence Constitution. The template at `.specify/memory/constitution.md` has been completely replaced with the specific constitution content provided by the user.
+
+Additionally, I've updated the following template files to align with the new constitution:
+1. `.specify/templates/plan-template.md` - Updated the Constitution Check section with specific compliance items
+2. `.specify/templates/spec-template.md` - Updated functional requirements to include constitutional requirements
+3. `.specify/templates/tasks-template.md` - Updated foundational tasks and final phase tasks to include constitutional compliance
+
+The new constitution establishes 6 core principles:
+1. Specification Supremacy
+2. Accuracy by Verification
+3. Grounded Intelligence
+4. Clarity for Technical Readers
+5. Reproducibility
+6. Ethical & Transparent AI Usage
+
+It also mandates specific technology stack requirements (Docusaurus, Spec-Kit Plus, Claude Code, FastAPI, Qdrant, Neon PostgreSQL, Better Auth for bonus features).
+
+The constitution includes governance for book authoring standards, RAG chatbot functionality, personalization/localization features, scoring framework, and success criteria.
+
+## Outcome
+
+- ✅ Impact: Complete constitution replacement with new AI-native book project governance
+- 🧪 Tests: No tests required for this governance update
+- 📁 Files: 4 files updated to maintain constitutional alignment
+- 🔁 Next prompts: Ready to proceed with feature development following new constitution
+- 🧠 Reflection: Constitution now provides comprehensive governance for AI-native book project with RAG capabilities
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: None
+- Graders run and results (PASS/FAIL): N/A for governance update
+- Prompt variant (if applicable): N/A
+- Next experiment (smallest change to try): Begin feature development following new constitution

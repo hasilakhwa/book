@@ -62,12 +62,16 @@ description: "Task list template for feature implementation"
 
 Examples of foundational tasks (adjust based on your project):
 
-- [ ] T004 Setup database schema and migrations framework
-- [ ] T005 [P] Implement authentication/authorization framework
-- [ ] T006 [P] Setup API routing and middleware structure
+- [ ] T004 Setup database schema and migrations framework (using Neon PostgreSQL as required by constitution)
+- [ ] T005 [P] Implement authentication/authorization framework (Better Auth as required by constitution if implementing auth)
+- [ ] T006 [P] Setup API routing and middleware structure (using FastAPI as required by constitution)
 - [ ] T007 Create base models/entities that all stories depend on
 - [ ] T008 Configure error handling and logging infrastructure
 - [ ] T009 Setup environment configuration management
+- [ ] T010 [P] Setup Docusaurus framework for book publishing (as required by constitution)
+- [ ] T011 [P] Configure Spec-Kit Plus for specification management (as required by constitution)
+- [ ] T012 [P] Setup Qdrant vector database for RAG functionality (as required by constitution if implementing RAG)
+- [ ] T013 [P] Verify constitutional compliance checklist per constitution section 9
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -156,6 +160,9 @@ Examples of foundational tasks (adjust based on your project):
 - [ ] TXXX [P] Additional unit tests (if requested) in tests/unit/
 - [ ] TXXX Security hardening
 - [ ] TXXX Run quickstart.md validation
+- [ ] TXXX Final constitutional compliance verification per constitution section 9
+- [ ] TXXX Verify all content meets readability requirements (Flesch–Kincaid Grade 10–12) and APA citation style
+- [ ] TXXX Ensure all AI-generated content is auditable, traceable, and governed by deterministic specifications
 
 ---
 
