@@ -3,34 +3,35 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 // With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
-(module.exports = {
-  title: 'ROS 2 Nervous System for Humanoid Robotics',
-  tagline: 'Educational content on ROS 2 as the middleware nervous system in humanoid robotics',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'your-organization', // Usually your GitHub org/user name.
-  projectName: 'ros2-nervous-system', // Usually your repo name.
+module.exports = {
+  title: "ROS 2 Nervous System for Humanoid Robotics",
+  tagline:
+    "Educational content on ROS 2 as the middleware nervous system in humanoid robotics",
+  url: "https://book-lime-xi.vercel.app/",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  organizationName: "your-organization", // Usually your GitHub org/user name.
+  projectName: "ros2-nervous-system", // Usually your repo name.
 
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: 'https://github.com/your-username/ros2-nervous-system/',
+          editUrl: "https://github.com/your-username/ros2-nervous-system/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: 'https://github.com/your-username/ros2-nervous-system/',
+          editUrl: "https://github.com/your-username/ros2-nervous-system/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -40,64 +41,64 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'ROS 2 Nervous System',
+        title: "ROS 2 Nervous System",
         logo: {
-          alt: 'ROS 2 Nervous System Logo',
-          src: 'img/logo.svg',
+          alt: "ROS 2 Nervous System Logo",
+          src: "img/logo.svg",
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Chapters',
+            type: "doc",
+            docId: "intro",
+            position: "left",
+            label: "Chapters",
           },
           {
-            href: 'https://github.com/your-username/ros2-nervous-system',
-            label: 'GitHub',
-            position: 'right',
+            href: "https://github.com/your-username/ros2-nervous-system",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Content',
+            title: "Content",
             items: [
               {
-                label: 'ROS 2 Fundamentals',
-                to: '/docs/ros2-nervous-system/ros2-as-nervous-system',
+                label: "ROS 2 Fundamentals",
+                to: "/docs/ros2-nervous-system/ros2-as-nervous-system",
               },
               {
-                label: 'Communication Patterns',
-                to: '/docs/ros2-nervous-system/nodes-topics-services',
+                label: "Communication Patterns",
+                to: "/docs/ros2-nervous-system/nodes-topics-services",
               },
               {
-                label: 'URDF Description',
-                to: '/docs/ros2-nervous-system/urdf-description',
+                label: "URDF Description",
+                to: "/docs/ros2-nervous-system/urdf-description",
               },
             ],
           },
           {
-            title: 'Resources',
+            title: "Resources",
             items: [
               {
-                label: 'ROS 2 Documentation',
-                href: 'https://docs.ros.org/',
+                label: "ROS 2 Documentation",
+                href: "https://docs.ros.org/",
               },
               {
-                label: 'Docusaurus',
-                href: 'https://docusaurus.io/',
+                label: "Docusaurus",
+                href: "https://docusaurus.io/",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/your-username/ros2-nervous-system',
+                label: "GitHub",
+                href: "https://github.com/your-username/ros2-nervous-system",
               },
             ],
           },
@@ -109,4 +110,4 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         darkTheme: darkCodeTheme,
       },
     }),
-});
+};
