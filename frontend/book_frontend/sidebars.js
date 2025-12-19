@@ -35,6 +35,24 @@ module.exports = {
         'digital-twin-simulation/high-fidelity-unity',
       ],
     },
+    {
+      type: 'category',
+      label: 'The AI-Robot Brain (NVIDIA Isaac™)',
+      items: [
+        'isaac-ai-brain/isaac-overview',
+        'isaac-ai-brain/accelerated-perception',
+        'isaac-ai-brain/navigation-planning',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Vision-Language-Action (VLA) Systems',
+      items: [
+        'vla-systems/vla-foundations',
+        'vla-systems/voice-to-action',
+        'vla-systems/cognitive-planning',
+      ],
+    },
   ],
 
   // But you can create a sidebar manually
