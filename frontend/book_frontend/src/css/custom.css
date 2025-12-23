@@ -4,16 +4,108 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* Modern, accessible color palette following WCAG 2.1 AA standards */
 :root {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  /* Primary colors with sufficient contrast */
+  --ifm-color-primary: #2c66c4; /* Modern blue with good contrast */
+  --ifm-color-primary-dark: #2558aa;
+  --ifm-color-primary-darker: #22529e;
+  --ifm-color-primary-darkest: #1c4380;
+  --ifm-color-primary-light: #4d7bd6;
+  --ifm-color-primary-lighter: #6b90e0;
+  --ifm-color-primary-lightest: #a4c0e8;
+
+  /* Secondary colors */
+  --ifm-color-secondary: #6c757d;
+  --ifm-color-secondary-dark: #5a6268;
+  --ifm-color-secondary-darker: #545b62;
+  --ifm-color-secondary-darkest: #3d4246;
+  --ifm-color-secondary-light: #868e96;
+  --ifm-color-secondary-lighter: #adb5bd;
+  --ifm-color-secondary-lightest: #e9ecef;
+
+  /* Success, warning, and danger colors with WCAG compliance */
+  --ifm-color-success: #28a745; /* Passes WCAG AA */
+  --ifm-color-success-dark: #218838;
+  --ifm-color-success-darker: #1e7e34;
+  --ifm-color-success-darkest: #165c26;
+  --ifm-color-success-light: #44c05d;
+  --ifm-color-success-lighter: #6ed582;
+  --ifm-color-success-lightest: #b3e6c8;
+
+  --ifm-color-warning: #ffc107; /* Passes WCAG with dark text */
+  --ifm-color-warning-dark: #e0a800;
+  --ifm-color-warning-darker: #d39e00;
+  --ifm-color-warning-darkest: #b08300;
+  --ifm-color-warning-light: #ffca2c;
+  --ifm-color-warning-lighter: #ffd34d;
+  --ifm-color-warning-lightest: #ffeaa7;
+
+  --ifm-color-danger: #dc3545; /* Passes WCAG AA */
+  --ifm-color-danger-dark: #c82333;
+  --ifm-color-danger-darker: #bd2130;
+  --ifm-color-danger-darkest: #901a26;
+  --ifm-color-danger-light: #e4606d;
+  --ifm-color-danger-lighter: #ec8e96;
+  --ifm-color-danger-lightest: #f6cdd1;
+
+  /* Background and text colors with proper contrast ratios */
+  --ifm-color-background: #ffffff;
+  --ifm-color-background-secondary: #f8f9fa;
+  --ifm-color-background-alt: #f0f2f5;
+  --ifm-color-emphasis-0: #000000;
+  --ifm-color-emphasis-100: #111111;
+  --ifm-color-emphasis-200: #222222;
+  --ifm-color-emphasis-300: #333333;
+  --ifm-color-emphasis-400: #444444;
+  --ifm-color-emphasis-500: #555555;
+  --ifm-color-emphasis-600: #666666;
+  --ifm-color-emphasis-700: #777777;
+  --ifm-color-emphasis-800: #888888;
+  --ifm-color-emphasis-900: #999999;
+  --ifm-color-emphasis-1000: #ffffff;
+
+  --ifm-color-content: #242526;
+  --ifm-color-content-secondary: #525354;
+
+  /* Link colors with sufficient contrast */
+  --ifm-color-link: #2c66c4;
+  --ifm-color-link-hover: #1d4991;
+
+  /* Code and syntax highlighting colors */
   --ifm-code-font-size: 95%;
+  --ifm-code-background: #f6f7f8;
+  --ifm-code-color: #5b5c5d;
+  --ifm-pre-background: #f6f7f8;
+  --ifm-pre-color: #242526;
+
+  /* Border colors */
+  --ifm-color-border: #dadde1;
+  --ifm-color-border-secondary: #ebedf0;
+  --ifm-color-shadow: rgba(0, 0, 0, 0.1);
+
+  /* Spacing scale for consistent layout */
+  --ifm-spacing-xs: 0.5rem;
+  --ifm-spacing-sm: 0.75rem;
+  --ifm-spacing-md: 1rem;
+  --ifm-spacing-lg: 1.5rem;
+  --ifm-spacing-xl: 2rem;
+  --ifm-spacing-2xl: 3rem;
+  --ifm-spacing-3xl: 4rem;
+
+  /* Typography */
+  --ifm-font-family-base: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  --ifm-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.6;
+
+  /* Breakpoints for responsive design */
+  --ifm-breakpoint-xs: 0;
+  --ifm-breakpoint-sm: 576px;
+  --ifm-breakpoint-md: 768px;
+  --ifm-breakpoint-lg: 992px;
+  --ifm-breakpoint-xl: 1200px;
+  --ifm-breakpoint-2xl: 1400px;
 }
 
 .docusaurus-highlight-code-line {
@@ -25,4 +117,722 @@
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark theme color overrides */
+html[data-theme='dark'] {
+  --ifm-color-primary: #4d90f0;
+  --ifm-color-primary-dark: #3279e0;
+  --ifm-color-primary-darker: #2d70cc;
+  --ifm-color-primary-darkest: #245aab;
+  --ifm-color-primary-light: #6aa3f3;
+  --ifm-color-primary-lighter: #87b7f6;
+  --ifm-color-primary-lightest: #a4c9f8;
+
+  --ifm-color-secondary: #6c757d;
+  --ifm-color-secondary-dark: #5a6268;
+  --ifm-color-secondary-darker: #545b62;
+  --ifm-color-secondary-darkest: #3d4246;
+  --ifm-color-secondary-light: #868e96;
+  --ifm-color-secondary-lighter: #adb5bd;
+  --ifm-color-secondary-lightest: #e9ecef;
+
+  --ifm-color-success: #28a745;
+  --ifm-color-success-dark: #218838;
+  --ifm-color-success-darker: #1e7e34;
+  --ifm-color-success-darkest: #165c26;
+  --ifm-color-success-light: #44c05d;
+  --ifm-color-success-lighter: #6ed582;
+  --ifm-color-success-lightest: #b3e6c8;
+
+  --ifm-color-warning: #ffc107;
+  --ifm-color-warning-dark: #e0a800;
+  --ifm-color-warning-darker: #d39e00;
+  --ifm-color-warning-darkest: #b08300;
+  --ifm-color-warning-light: #ffca2c;
+  --ifm-color-warning-lighter: #ffd34d;
+  --ifm-color-warning-lightest: #ffeaa7;
+
+  --ifm-color-danger: #dc3545;
+  --ifm-color-danger-dark: #c82333;
+  --ifm-color-danger-darker: #bd2130;
+  --ifm-color-danger-darkest: #901a26;
+  --ifm-color-danger-light: #e4606d;
+  --ifm-color-danger-lighter: #ec8e96;
+  --ifm-color-danger-lightest: #f6cdd1;
+
+  --ifm-color-background: #18191a;
+  --ifm-color-background-secondary: #242526;
+  --ifm-color-background-alt: #2d2f31;
+  --ifm-color-content: #e4e5e6;
+  --ifm-color-content-secondary: #c1c5c8;
+
+  --ifm-color-link: #4d90f0;
+  --ifm-color-link-hover: #6aa3f3;
+
+  --ifm-code-background: #2d2f31;
+  --ifm-code-color: #d0d4d8;
+  --ifm-pre-background: #2d2f31;
+  --ifm-pre-color: #e4e5e6;
+
+  --ifm-color-border: #444950;
+  --ifm-color-border-secondary: #33363a;
+  --ifm-color-shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* CSS Utility Classes for Consistent Design Patterns */
+/* Spacing utilities */
+.margin-xs { margin: var(--ifm-spacing-xs) !important; }
+.margin-sm { margin: var(--ifm-spacing-sm) !important; }
+.margin-md { margin: var(--ifm-spacing-md) !important; }
+.margin-lg { margin: var(--ifm-spacing-lg) !important; }
+.margin-xl { margin: var(--ifm-spacing-xl) !important; }
+
+.margin-top-xs { margin-top: var(--ifm-spacing-xs) !important; }
+.margin-top-sm { margin-top: var(--ifm-spacing-sm) !important; }
+.margin-top-md { margin-top: var(--ifm-spacing-md) !important; }
+.margin-top-lg { margin-top: var(--ifm-spacing-lg) !important; }
+.margin-top-xl { margin-top: var(--ifm-spacing-xl) !important; }
+
+.padding-xs { padding: var(--ifm-spacing-xs) !important; }
+.padding-sm { padding: var(--ifm-spacing-sm) !important; }
+.padding-md { padding: var(--ifm-spacing-md) !important; }
+.padding-lg { padding: var(--ifm-spacing-lg) !important; }
+.padding-xl { padding: var(--ifm-spacing-xl) !important; }
+
+/* Background utilities */
+.bg-primary { background-color: var(--ifm-color-primary) !important; }
+.bg-secondary { background-color: var(--ifm-color-secondary) !important; }
+.bg-success { background-color: var(--ifm-color-success) !important; }
+.bg-warning { background-color: var(--ifm-color-warning) !important; }
+.bg-danger { background-color: var(--ifm-color-danger) !important; }
+.bg-light { background-color: var(--ifm-color-background-secondary) !important; }
+.bg-dark { background-color: var(--ifm-color-content) !important; }
+
+/* Text utilities */
+.text-primary { color: var(--ifm-color-primary) !important; }
+.text-secondary { color: var(--ifm-color-secondary) !important; }
+.text-success { color: var(--ifm-color-success) !important; }
+.text-warning { color: var(--ifm-color-warning) !important; }
+.text-danger { color: var(--ifm-color-danger) !important; }
+.text-light { color: var(--ifm-color-background) !important; }
+.text-dark { color: var(--ifm-color-content) !important; }
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+
+/* Border utilities */
+.border { border: 1px solid var(--ifm-color-border) !important; }
+.border-primary { border-color: var(--ifm-color-primary) !important; }
+.rounded { border-radius: 4px !important; }
+.rounded-md { border-radius: 8px !important; }
+.rounded-lg { border-radius: 12px !important; }
+
+/* Flexbox utilities */
+.d-flex { display: flex !important; }
+.d-inline-flex { display: inline-flex !important; }
+.flex-row { flex-direction: row !important; }
+.flex-column { flex-direction: column !important; }
+.justify-content-center { justify-content: center !important; }
+.justify-content-between { justify-content: space-between !important; }
+.align-items-center { align-items: center !important; }
+
+/* Shadow utilities */
+.shadow-sm { box-shadow: 0 1px 2px 0 var(--ifm-color-shadow) !important; }
+.shadow { box-shadow: 0 1px 3px 0 var(--ifm-color-shadow), 0 1px 2px -1px var(--ifm-color-shadow) !important; }
+.shadow-md { box-shadow: 0 4px 6px -1px var(--ifm-color-shadow), 0 2px 4px -1px var(--ifm-color-shadow) !important; }
+.shadow-lg { box-shadow: 0 10px 15px -3px var(--ifm-color-shadow), 0 4px 6px -2px var(--ifm-color-shadow) !important; }
+
+/* Visual hierarchy improvements for content sections */
+/* Enhanced heading styles */
+.markdown h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-content);
+  border-bottom: 1px solid var(--ifm-color-border);
+  padding-bottom: 0.5rem;
+}
+
+.markdown h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 1.25rem;
+  color: var(--ifm-color-content);
+  border-bottom: 1px solid var(--ifm-color-border-secondary);
+  padding-bottom: 0.5rem;
+}
+
+.markdown h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-content);
+}
+
+.markdown h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.45;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-content);
+}
+
+.markdown h5 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-content);
+}
+
+.markdown h6 {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+/* Content section styling */
+.markdown p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: var(--ifm-color-content);
+}
+
+.markdown ul, .markdown ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.markdown li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.markdown blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  background-color: var(--ifm-color-background-secondary);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--ifm-color-content-secondary);
+}
+
+.markdown code {
+  background-color: var(--ifm-code-background);
+  color: var(--ifm-code-color);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+.markdown pre {
+  background-color: var(--ifm-pre-background);
+  color: var(--ifm-pre-color);
+  padding: 1.25rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.markdown pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+/* Section containers */
+.container {
+  max-width: 100%;
+}
+
+.container.padding-horiz--md {
+  padding-left: var(--ifm-spacing-md);
+  padding-right: var(--ifm-spacing-md);
+}
+
+/* Subtle design elements to enhance professionalism */
+/* Subtle gradients for section headers */
+.header-gradient {
+  background: linear-gradient(135deg, var(--ifm-color-primary-light) 0%, var(--ifm-color-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Professional card styling */
+.card {
+  border: 1px solid var(--ifm-color-border);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Subtle animations */
+.fade-in {
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Professional button styling */
+.button--primary {
+  box-shadow: 0 2px 4px rgba(44, 102, 196, 0.2);
+}
+
+.button--primary:hover {
+  box-shadow: 0 4px 8px rgba(44, 102, 196, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Subtle dividers */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ifm-color-border), transparent);
+  margin: var(--ifm-spacing-lg) 0;
+}
+
+/* Enhanced table styling */
+.markdown table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.markdown table th {
+  background-color: var(--ifm-color-background-secondary);
+  font-weight: 600;
+}
+
+.markdown table tr:nth-child(even) {
+  background-color: var(--ifm-color-background-alt);
+}
+
+/* Enhanced link styling for clear identification and accessibility */
+.markdown a {
+  color: var(--ifm-color-link);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+  border-radius: 2px; /* Subtle rounding for visual appeal */
+}
+
+.markdown a:hover, .markdown a:focus {
+  color: var(--ifm-color-link-hover);
+  border-bottom-color: var(--ifm-color-link-hover);
+  text-decoration: none; /* Remove default underline */
+  outline: 2px solid var(--ifm-color-link); /* Clear focus indicator for accessibility */
+  outline-offset: 2px;
+}
+
+.markdown a:focus {
+  outline: 2px solid var(--ifm-color-link);
+  outline-offset: 2px;
+}
+
+/* Underline animation effect for visual feedback */
+.markdown a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--ifm-color-link-hover);
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+.markdown a:hover::after, .markdown a:focus::after {
+  width: 100%;
+}
+
+/* Ensure sufficient contrast for accessibility */
+.markdown a:visited {
+  color: var(--ifm-color-link);
+}
+
+/* Distinguish external links if needed */
+.markdown a[href^="http"]:not([href*="localhost"]):not([href*="127.0.0.1"])::after {
+  content: " ↗";
+  font-size: 0.8em;
+  margin-left: 2px;
+  text-decoration: none;
+}
+
+/* Mobile-first responsive utilities */
+@media (max-width: 767px) {
+  /* Reduce spacing on mobile for better content density */
+  .container {
+    padding-left: var(--ifm-spacing-sm) !important;
+    padding-right: var(--ifm-spacing-sm) !important;
+  }
+
+  .margin-xs { margin: calc(var(--ifm-spacing-xs) * 0.75) !important; }
+  .margin-sm { margin: calc(var(--ifm-spacing-sm) * 0.75) !important; }
+  .margin-md { margin: calc(var(--ifm-spacing-md) * 0.75) !important; }
+  .margin-lg { margin: calc(var(--ifm-spacing-lg) * 0.75) !important; }
+  .margin-xl { margin: calc(var(--ifm-spacing-xl) * 0.75) !important; }
+
+  .margin-top-xs { margin-top: calc(var(--ifm-spacing-xs) * 0.75) !important; }
+  .margin-top-sm { margin-top: calc(var(--ifm-spacing-sm) * 0.75) !important; }
+  .margin-top-md { margin-top: calc(var(--ifm-spacing-md) * 0.75) !important; }
+  .margin-top-lg { margin-top: calc(var(--ifm-spacing-lg) * 0.75) !important; }
+  .margin-top-xl { margin-top: calc(var(--ifm-spacing-xl) * 0.75) !important; }
+
+  .padding-xs { padding: calc(var(--ifm-spacing-xs) * 0.75) !important; }
+  .padding-sm { padding: calc(var(--ifm-spacing-sm) * 0.75) !important; }
+  .padding-md { padding: calc(var(--ifm-spacing-md) * 0.75) !important; }
+  .padding-lg { padding: calc(var(--ifm-spacing-lg) * 0.75) !important; }
+  .padding-xl { padding: calc(var(--ifm-spacing-xl) * 0.75) !important; }
+
+  /* Adjust typography for mobile - enhanced scaling */
+  .markdown h1 {
+    font-size: 1.8rem;
+    line-height: 1.25;
+  }
+
+  .markdown h2 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .markdown h3 {
+    font-size: 1.3rem;
+  }
+
+  .markdown h4 {
+    font-size: 1.15rem;
+  }
+
+  .markdown h5 {
+    font-size: 1.05rem;
+  }
+
+  .markdown h6 {
+    font-size: 1rem;
+  }
+
+  /* Adjust body text for mobile readability */
+  .markdown p,
+  .markdown li {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  /* Optimize navigation for mobile */
+  .navbar__items {
+    gap: 0.5rem;
+  }
+
+  .navbar__item {
+    padding: 0.5rem;
+  }
+
+  /* Improve mobile touch targets */
+  .button {
+    padding: 0.75rem 1rem;
+    min-height: 44px; /* Minimum touch target size */
+    min-width: 44px;
+  }
+
+  /* Ensure links have adequate touch targets */
+  .markdown a {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 10px;
+  }
+
+  /* Navigation items */
+  .navbar__item,
+  .navbar__link {
+    min-height: 44px;
+    padding: 10px 12px;
+  }
+
+  /* Sidebar items */
+  .menu__link {
+    min-height: 44px;
+    padding: 12px 16px;
+  }
+
+  /* Search input */
+  .searchInput {
+    min-height: 44px;
+    padding: 12px;
+  }
+
+  /* Table of contents items */
+  .table-of-contents__link {
+    min-height: 44px;
+    padding: 8px 12px;
+  }
+
+  /* Pagination controls */
+  .pagination-nav__link {
+    min-height: 44px;
+    padding: 12px;
+  }
+
+  /* Code block copy button */
+  .code-block__copy-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Adjust code blocks for mobile */
+  .markdown pre {
+    font-size: 0.75em;
+    padding: 0.75rem;
+    border-radius: 6px;
+  }
+
+  .markdown code {
+    font-size: 0.85em;
+  }
+
+  /* Adjust table display for mobile */
+  .markdown table {
+    font-size: 0.8em;
+  }
+}
+
+/* Tablet sidebar and layout optimizations */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Adjust sidebar width for tablet */
+  .sidebar {
+    width: 280px;
+  }
+
+  /* Adjust main content area for tablet */
+  .docItemContainer {
+    max-width: calc(100% - 280px);
+  }
+
+  /* Optimize sidebar navigation for tablet */
+  .menu__list {
+    padding-left: 0.5rem;
+  }
+
+  /* Adjust sidebar items for better touch accessibility on tablets */
+  .menu__link {
+    min-height: 40px;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
+  /* Adjust typography for tablet */
+  .markdown h1 {
+    font-size: 2.2rem;
+  }
+
+  .markdown h2 {
+    font-size: 1.8rem;
+  }
+
+  .markdown h3 {
+    font-size: 1.45rem;
+  }
+
+  .markdown p,
+  .markdown li {
+    font-size: 1.05rem;
+  }
+
+  /* Adjust navbar for tablet */
+  .navbar-sidebar__brand {
+    padding: 0.75rem;
+  }
+
+  /* Optimize table of contents for tablet */
+  .table-of-contents {
+    font-size: 0.9rem;
+  }
+
+  .table-of-contents__link {
+    padding: 6px 10px;
+  }
+}
+
+/* Desktop typography scaling */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .markdown h1 {
+    font-size: 2.4rem;
+  }
+
+  .markdown h2 {
+    font-size: 1.9rem;
+  }
+
+  .markdown h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsive content layout for optimal readability */
+@media (max-width: 767px) {
+  /* Adjust content container for mobile */
+  .container {
+    max-width: 100%;
+    padding-left: var(--ifm-spacing-sm) !important;
+    padding-right: var(--ifm-spacing-sm) !important;
+  }
+
+  /* Optimize content width for mobile readability */
+  .markdown {
+    font-size: 1rem;
+  }
+
+  /* Adjust content blocks for mobile */
+  .alert,
+  .card {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 6px;
+  }
+
+  /* Adjust image display for mobile */
+  .markdown img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Adjust code blocks for mobile readability */
+  .markdown pre,
+  .markdown code {
+    font-size: 0.8em;
+    border-radius: 6px;
+  }
+
+  /* Optimize table display for mobile */
+  .markdown table {
+    font-size: 0.8em;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Adjust blockquotes for mobile */
+  .markdown blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1rem;
+  }
+}
+
+/* Tablet content layout optimizations */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Adjust content container for tablet */
+  .container {
+    max-width: 100%;
+    padding-left: var(--ifm-spacing-md) !important;
+    padding-right: var(--ifm-spacing-md) !important;
+  }
+
+  /* Optimize content width for tablet readability */
+  .docItemContainer {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* Adjust code blocks for tablet */
+  .markdown pre,
+  .markdown code {
+    font-size: 0.85em;
+  }
+
+  /* Adjust blockquotes for tablet */
+  .markdown blockquote {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+/* Desktop content layout optimizations */
+@media (min-width: 1024px) {
+  /* Optimize content width for desktop readability */
+  .docItemContainer {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Adjust content margins for desktop */
+  .container {
+    max-width: 100%;
+    padding-left: var(--ifm-spacing-lg) !important;
+    padding-right: var(--ifm-spacing-lg) !important;
+  }
+
+  /* Optimize code blocks for desktop */
+  .markdown pre,
+  .markdown code {
+    font-size: 0.9em;
+  }
+
+  /* Adjust blockquotes for desktop */
+  .markdown blockquote {
+    padding: 1.5rem 2rem;
+  }
+}
+
+/* Large desktop typography scaling */
+@media (min-width: 1200px) {
+  .markdown h1 {
+    font-size: 2.5rem;
+  }
+
+  .markdown h2 {
+    font-size: 2rem;
+  }
+
+  .markdown h3 {
+    font-size: 1.5rem;
+  }
+
+  .markdown p,
+  .markdown li {
+    font-size: 1.05rem;
+  }
+
+  /* Large desktop responsive utilities */
+  .margin-lg-xs { margin: var(--ifm-spacing-xs) !important; }
+  .margin-lg-sm { margin: var(--ifm-spacing-sm) !important; }
+  .margin-lg-md { margin: var(--ifm-spacing-md) !important; }
+  .margin-lg-lg { margin: var(--ifm-spacing-lg) !important; }
+  .margin-lg-xl { margin: var(--ifm-spacing-xl) !important; }
+
+  .padding-lg-xs { padding: var(--ifm-spacing-xs) !important; }
+  .padding-lg-sm { padding: var(--ifm-spacing-sm) !important; }
+  .padding-lg-md { padding: var(--ifm-spacing-md) !important; }
+  .padding-lg-lg { padding: var(--ifm-spacing-lg) !important; }
+  .padding-lg-xl { padding: var(--ifm-spacing-xl) !important; }
+}
+
+/* Tablet responsive utilities */
+@media (min-width: 768px) and (max-width: 991px) {
+  .margin-md-xs { margin: var(--ifm-spacing-xs) !important; }
+  .margin-md-sm { margin: var(--ifm-spacing-sm) !important; }
+  .margin-md-md { margin: var(--ifm-spacing-md) !important; }
+  .margin-md-lg { margin: var(--ifm-spacing-lg) !important; }
+  .margin-md-xl { margin: var(--ifm-spacing-xl) !important; }
+
+  .padding-md-xs { padding: var(--ifm-spacing-xs) !important; }
+  .padding-md-sm { padding: var(--ifm-spacing-sm) !important; }
+  .padding-md-md { padding: var(--ifm-spacing-md) !important; }
+  .padding-md-lg { padding: var(--ifm-spacing-lg) !important; }
+  .padding-md-xl { padding: var(--ifm-spacing-xl) !important; }
 }

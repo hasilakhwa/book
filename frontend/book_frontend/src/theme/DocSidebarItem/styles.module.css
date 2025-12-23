@@ -1,0 +1,187 @@
+/**
+ * Custom styles for the enhanced DocSidebarItem component
+ * Improves individual sidebar item navigation and accessibility
+ */
+
+/* Enhanced link styling for better UX */
+.menu__link {
+  border-radius: 6px;
+  margin: 2px 0;
+  padding: 6px 12px;
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.menu__link:hover {
+  background-color: var(--ifm-color-background-secondary);
+}
+
+.menu__link--active {
+  background-color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-content);
+  font-weight: 500;
+}
+
+html[data-theme='dark'] .menu__link--active {
+  background-color: var(--ifm-color-primary-darkest);
+}
+
+/* Improved accessibility focus indicators */
+.menu__link:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Better visual indicator for external links */
+.menu__link svg {
+  margin-left: auto;
+  opacity: 0.6;
+}
+
+/* Enhanced category styling */
+.menu__list-item-collapsible {
+  margin: 2px 0;
+  border-radius: 6px;
+}
+
+.menu__list-item-collapsible:hover {
+  background-color: var(--ifm-color-background-secondary);
+}
+
+.menu__list-item-collapsible .menu__button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 6px 12px;
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: inherit;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.menu__list-item-collapsible .menu__button:hover {
+  background-color: var(--ifm-color-background-secondary);
+}
+
+/* Caret icon styling */
+.menu__button-caret {
+  margin-right: 8px;
+  transition: transform 0.2s ease;
+  transform: rotate(-90deg);
+}
+
+.menu__button-caret--expanded {
+  transform: rotate(0deg);
+}
+
+/* Current section styling */
+.current-section {
+  background-color: var(--ifm-color-primary-lightest);
+  border-left: 3px solid var(--ifm-color-primary);
+  position: relative;
+}
+
+html[data-theme='dark'] .current-section {
+  background-color: var(--ifm-color-primary-darkest);
+}
+
+/* Enhanced visual indicator for current section */
+.current-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: var(--ifm-color-primary);
+  border-radius: 2px 0 0 2px;
+}
+
+/* Enhanced active link styling */
+.menu__link--active {
+  background-color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-content);
+  font-weight: 600;
+  position: relative;
+  border-left: 3px solid var(--ifm-color-primary);
+  margin-left: -3px;
+  padding-left: 12px;
+}
+
+html[data-theme='dark'] .menu__link--active {
+  background-color: var(--ifm-color-primary-darkest);
+}
+
+/* Active link visual indicator */
+.menu__link--active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: var(--ifm-color-primary);
+  border-radius: 2px 0 0 2px;
+}
+
+/* Better nesting indentation */
+.menu__list .menu__list {
+  padding-left: 1.25rem;
+}
+
+.menu__list .menu__list .menu__list {
+  padding-left: 1.5rem;
+}
+
+/* Visual hierarchy for nested items */
+.menu__list .menu__list .menu__link {
+  padding-left: 24px;
+}
+
+.menu__list .menu__list .menu__list .menu__link {
+  padding-left: 32px;
+}
+
+/* Enhanced active state for nested items */
+.menu__list .menu__list .menu__link--active {
+  background-color: var(--ifm-color-primary-lighter);
+}
+
+html[data-theme='dark'] .menu__list .menu__list .menu__link--active {
+  background-color: var(--ifm-color-primary-darker);
+}
+
+/* Smooth transition for sidebar item expansion/collapse */
+.menuListTransition {
+  transition:
+    opacity 0.3s ease-in-out,
+    max-height 0.5s ease-in-out,
+    visibility 0.3s ease-in-out;
+}
+
+/* Smooth caret rotation animation */
+.menu__button-caret {
+  transition: transform 0.3s ease;
+}
+
+.menu__button-caret--expanded {
+  transform: rotate(0deg);
+}
+
+/* Enhanced hover effect for collapsible items */
+.menu__list-item-collapsible:hover {
+  background-color: var(--ifm-color-background-secondary);
+  border-radius: 6px;
+}
+
+/* Improved focus styles for accessibility */
+.menu__list-item-collapsible button:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+  border-radius: 6px;
+}

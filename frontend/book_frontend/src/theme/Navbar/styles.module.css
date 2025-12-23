@@ -1,0 +1,245 @@
+/**
+ * Custom styles for the enhanced Navbar component
+ * Improves visual hierarchy and accessibility
+ */
+
+/*
+Hide toggle in small viewports
+ */
+@media screen and (max-width: 997px) {
+  .toggle {
+    display: none;
+  }
+}
+
+.navbarHideable {
+  transition: transform var(--ifm-transition-fast) ease;
+}
+
+.navbarHidden {
+  transform: translate3d(0, calc(-100% - 2px), 0);
+}
+
+.navbarSidebarToggle {
+  margin-right: 1rem;
+}
+
+.navbarSidebarCloseSvg {
+  fill: var(--ifm-color-emphasis-600);
+}
+
+/* Enhanced navbar styling for better visual hierarchy */
+.navbar {
+  background-color: var(--ifm-color-background);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--ifm-color-border);
+  padding: 0.75rem 0;
+}
+
+.navbar__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navbar__items {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar__items--right {
+  gap: 0.75rem;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--ifm-color-content);
+}
+
+.navbar__logo {
+  height: 2rem;
+  margin-right: 0.75rem;
+}
+
+.navbar__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.navbar__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 6px;
+  background-color: var(--ifm-color-background-secondary);
+  color: var(--ifm-color-content);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navbar__toggle:hover {
+  background-color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary);
+}
+
+/* Enhanced focus styles for accessibility */
+.navbar__toggle:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Improved mobile sidebar styles */
+.navbar-sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  max-width: 300px;
+  background-color: var(--ifm-color-background);
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform var(--ifm-transition-fast) ease;
+  overflow-y: auto;
+}
+
+.navbar-sidebar--show {
+  transform: translateX(0);
+}
+
+.navbar-sidebar__brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid var(--ifm-color-border);
+  background-color: var(--ifm-color-background);
+}
+
+.navbar-sidebar__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 6px;
+  background-color: var(--ifm-color-background-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navbar-sidebar__close:hover {
+  background-color: var(--ifm-color-danger-lightest);
+  color: var(--ifm-color-danger);
+}
+
+/* Enhanced backdrop */
+.navbar-sidebar__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--ifm-transition-fast) ease;
+}
+
+.navbar-sidebar--show ~ .navbar-sidebar__backdrop {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Improved menu items */
+.menu__list {
+  padding: 1rem;
+}
+
+.menu__list .menu__list {
+  padding-left: 1.5rem;
+}
+
+.navbar-sidebar__back {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin: 0 1rem 1rem;
+  border: 1px solid var(--ifm-color-border);
+  border-radius: 6px;
+  background-color: var(--ifm-color-background-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navbar-sidebar__back:hover {
+  background-color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary);
+}
+
+/* Dark theme enhancements */
+html[data-theme='dark'] .navbar {
+  background-color: var(--ifm-color-background);
+  border-bottom: 1px solid var(--ifm-color-border);
+}
+
+html[data-theme='dark'] .navbar__brand {
+  color: var(--ifm-color-content);
+}
+
+/* Improved toggle accessibility */
+.toggle {
+  border-radius: 6px;
+  padding: 0.25rem;
+}
+
+.toggle:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Enhanced navbar item styling for current page indicators */
+.navbar__link {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.navbar__link:hover {
+  background-color: var(--ifm-color-background-secondary);
+  color: var(--ifm-color-primary);
+}
+
+.navbar__link--active {
+  background-color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  position: relative;
+}
+
+.navbar__link--active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: var(--ifm-color-primary);
+  border-radius: 2px 0 0 2px;
+}
+
+html[data-theme='dark'] .navbar__link--active {
+  background-color: var(--ifm-color-primary-darkest);
+}

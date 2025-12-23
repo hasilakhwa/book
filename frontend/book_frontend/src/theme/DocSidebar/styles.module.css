@@ -1,0 +1,197 @@
+/**
+ * Custom styles for the enhanced DocSidebar component
+ * Improves navigation structure and accessibility
+ */
+
+:root {
+  --collapse-button-bg-color-dark: #2e333a;
+}
+
+@media (min-width: 997px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    height: 100%;
+    position: sticky;
+    top: 0;
+    padding-top: var(--ifm-navbar-height);
+    width: var(--doc-sidebar-width);
+    transition: opacity 50ms ease;
+  }
+
+  .sidebarWithHideableNavbar {
+    padding-top: 0;
+  }
+
+  .sidebarHidden {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  .sidebarLogo {
+    display: flex !important;
+    align-items: center;
+    margin: 0 var(--ifm-navbar-padding-horizontal);
+    min-height: var(--ifm-navbar-height);
+    max-height: var(--ifm-navbar-height);
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  .sidebarLogo img {
+    margin-right: 0.5rem;
+    height: 2rem;
+  }
+
+  .menu {
+    flex-grow: 1;
+    padding: 0.5rem;
+  }
+
+  .menuWithAnnouncementBar {
+    margin-bottom: var(--docusaurus-announcement-bar-height);
+  }
+
+  .collapseSidebarButton {
+    display: block !important;
+    background-color: var(--ifm-button-background-color);
+    height: 40px;
+    position: sticky;
+    bottom: 0;
+    border-radius: 0;
+    border: 1px solid var(--ifm-toc-border-color);
+  }
+
+  .collapseSidebarButtonIcon {
+    transform: rotate(180deg);
+    margin-top: 4px;
+    transition: transform 0.3s ease;
+  }
+  html[dir='rtl'] .collapseSidebarButtonIcon {
+    transform: rotate(0);
+  }
+
+  html[data-theme='dark'] .collapseSidebarButton {
+    background-color: var(--collapse-button-bg-color-dark);
+  }
+
+  html[data-theme='dark'] .collapseSidebarButton:hover,
+  html[data-theme='dark'] .collapseSidebarButton:focus {
+    background-color: var(--ifm-color-emphasis-200);
+  }
+}
+
+.sidebarLogo,
+.collapseSidebarButton {
+  display: none;
+}
+
+.sidebarMenuIcon {
+  vertical-align: middle;
+}
+
+.sidebarMenuCloseIcon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  font-size: 1.5rem;
+  font-weight: var(--ifm-font-weight-bold);
+  line-height: 0.9;
+  width: 24px;
+}
+
+/* Enhanced navigation styles for improved UX */
+.menu__list {
+  padding-left: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.menu__list .menu__list {
+  padding-left: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Smooth animation for sidebar collapse/expand */
+.sidebar {
+  transition:
+    width 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.sidebarHidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transform: translateX(-10px);
+}
+
+.menu__link {
+  border-radius: 6px;
+  margin: 2px 0;
+  padding: 6px 12px;
+  transition: all 0.2s ease;
+}
+
+.menu__link:hover {
+  background-color: var(--ifm-color-background-secondary);
+}
+
+.menu__link--active {
+  background-color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-content);
+  font-weight: 500;
+}
+
+html[data-theme='dark'] .menu__link--active {
+  background-color: var(--ifm-color-primary-darkest);
+}
+
+/* Improved accessibility focus indicators */
+.menu__link:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Enhanced category styling */
+.menu__list-item-collapsible {
+  margin: 2px 0;
+  border-radius: 6px;
+}
+
+.menu__list-item-collapsible:hover {
+  background-color: var(--ifm-color-background-secondary);
+}
+
+/* Better spacing for nested items */
+.menu__list .menu__list .menu__list-item {
+  margin: 1px 0;
+}
+
+/* Visual indicator for current section */
+.current-section {
+  background-color: var(--ifm-color-primary-lightest);
+  border-left: 3px solid var(--ifm-color-primary);
+  position: relative;
+}
+
+html[data-theme='dark'] .current-section {
+  background-color: var(--ifm-color-primary-darkest);
+}
+
+/* Enhanced visual indicator for current section */
+.current-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: var(--ifm-color-primary);
+  border-radius: 2px 0 0 2px;
+}

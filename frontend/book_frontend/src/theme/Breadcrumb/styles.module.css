@@ -1,0 +1,105 @@
+/**
+ * Custom styles for the enhanced Breadcrumb component
+ * Improves navigation hierarchy and accessibility
+ */
+
+.breadcrumb {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 0;
+}
+
+.breadcrumbList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+}
+
+.breadcrumbItem {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.breadcrumbItemLink {
+  color: var(--ifm-color-emphasis-600);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.breadcrumbItemLink:hover {
+  color: var(--ifm-color-primary);
+  background-color: var(--ifm-color-background-secondary);
+}
+
+.breadcrumbItemLink:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+.breadcrumbItemLinkCurrent {
+  color: var(--ifm-color-emphasis-800);
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background-color: var(--ifm-color-primary-lightest);
+}
+
+html[data-theme='dark'] .breadcrumbItemLinkCurrent {
+  background-color: var(--ifm-color-primary-darkest);
+}
+
+.breadcrumbSeparator {
+  color: var(--ifm-color-emphasis-400);
+  margin: 0 0.25rem;
+  user-select: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .breadcrumb {
+    margin-bottom: 1rem;
+  }
+
+  .breadcrumbList {
+    font-size: 0.8rem;
+  }
+
+  .breadcrumbItemLink,
+  .breadcrumbItemLinkCurrent {
+    padding: 0.125rem 0.25rem;
+  }
+}
+
+/* Alternative separator styles */
+.breadcrumbList::marker {
+  content: '';
+}
+
+/* Enhanced accessibility for screen readers */
+@media (prefers-reduced-motion: reduce) {
+  .breadcrumbItemLink {
+    transition: none;
+  }
+}
+
+/* Focus management */
+.breadcrumbItem:focus-within {
+  position: relative;
+}
+
+.breadcrumbItem:focus-within::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  pointer-events: none;
+}

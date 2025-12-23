@@ -1,0 +1,162 @@
+/**
+ * Custom styles for the RelatedPages component
+ * Improves navigation between related pages and modules
+ */
+
+.relatedPages {
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--ifm-color-border);
+  border-bottom: 1px solid var(--ifm-color-border);
+}
+
+.relatedPagesHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.relatedPagesTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--ifm-color-content);
+  padding-right: 1rem;
+  background: linear-gradient(135deg, var(--ifm-color-primary-light) 0%, var(--ifm-color-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.relatedPagesDivider {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ifm-color-border), transparent);
+}
+
+.relatedPagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.relatedPageCard {
+  display: block;
+  padding: 1.25rem;
+  border: 1px solid var(--ifm-color-border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--ifm-color-content);
+  transition: all 0.3s ease;
+  background-color: var(--ifm-color-background);
+  position: relative;
+  overflow: hidden;
+}
+
+.relatedPageCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-color: var(--ifm-color-primary);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.relatedPageCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--ifm-color-primary-lightest);
+}
+
+.relatedPageCard:hover::before {
+  transform: scaleY(1);
+}
+
+.relatedPageCard:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+  border-color: var(--ifm-color-primary);
+}
+
+.relatedPageContent {
+  position: relative;
+  z-index: 1;
+}
+
+.relatedPageTitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+  color: var(--ifm-color-content);
+  transition: color 0.2s ease;
+}
+
+.relatedPageCard:hover .relatedPageTitle {
+  color: var(--ifm-color-primary);
+}
+
+.relatedPageDescription {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  color: var(--ifm-color-content-secondary);
+}
+
+.relatedPageLinkText {
+  font-size: 0.85rem;
+  color: var(--ifm-color-primary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .relatedPagesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .relatedPages {
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+  }
+
+  .relatedPagesTitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Dark theme enhancements */
+html[data-theme='dark'] .relatedPageCard {
+  background-color: var(--ifm-color-background);
+  border-color: var(--ifm-color-border);
+}
+
+html[data-theme='dark'] .relatedPageCard:hover {
+  border-color: var(--ifm-color-primary-darker);
+}
+
+/* Animation for entrance */
+.relatedPageCard {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Focus management for accessibility */
+.relatedPageCard:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}

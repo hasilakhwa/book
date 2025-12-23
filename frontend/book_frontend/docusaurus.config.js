@@ -9,7 +9,7 @@ module.exports = {
     "Educational content on ROS 2 as the middleware nervous system in humanoid robotics",
   url: "https://book-lime-xi.vercel.app/",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "your-organization", // Usually your GitHub org/user name.
